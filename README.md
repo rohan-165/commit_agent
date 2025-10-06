@@ -90,9 +90,4 @@ Copyright (c) 2025 Rohan
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files...
 
-## 🧑‍💼 Author
 
-Rohan Kumar Chaudhary (@rohan-165)
-📧 rohanchy165@gmail.com
-🌐 https://github.com/rohan-165
-📱 Mobile Application Developer | Flutter | Mobile App Enthusiast | AI Integrator
