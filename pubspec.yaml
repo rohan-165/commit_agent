@@ -1,7 +1,6 @@
 name: commit_agent
 description:  An AI-powered Git commit assistant that automatically generates commit messages using OpenAI GPT models.
 version: 1.0.0
-publish_to: "https://pub.dev"    
 homepage: https://github.com/rohan-165/commit_agent
 repository: https://github.com/rohan-165/commit_agent
 
