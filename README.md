@@ -1,39 +1,98 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# 🧠 Commit Agent
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages). 
+A smart AI-powered Git commit message generator for Dart and Flutter projects.  
+It automatically analyzes your Git changes (`git diff`) and suggests a clean, concise, and meaningful commit message using OpenAI.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages). 
--->
+---
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## 🚀 Features
 
-## Features
+✅ Automatically stages and analyzes your code changes  
+✅ Generates professional commit messages using OpenAI GPT models  
+✅ Interactive CLI — choose commit type and confirm messages  
+✅ Works on **Windows**, **macOS**, and **Linux**  
+✅ Simple initialization using your OpenAI API key  
+✅ Safe to use — requires explicit confirmation before committing  
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+---
 
-## Getting started
+## 🧩 Getting Started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+### 🔧 Installation
 
-## Usage
+Add this to your `dev_dependencies` in `pubspec.yaml`:
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+```yaml
 
-```dart
-const like = 'sample';
+dev_dependencies:
+  commit_agent: ^1.0.0
+
 ```
 
-## Additional information
+Then run:
+```base
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+flutter pub get
+
+```
+---
+
+### ⚙️ Initialization
+
+Before using the agent, initialize it with your OpenAI API key in your main script or command:
+```dart
+import 'package:commit_agent/commit_agent.dart';
+
+void main() {
+  // Initialize once with your OpenAI key
+  initCommitAgent(openAIKey: 'sk-your-api-key');
+
+  // Run the agent interactively
+  runCommitAgent();
+}
+
+```
+
+This will:
+ 1. Stage all changes (git add .)
+ 2. Ask for commit type (e.g., FEAT, FIX, REFACTOR, etc.)
+ 3. Optionally take your note
+ 4. Generate an AI-based commit message
+ 5. Confirm before committing and pushing 🚀
+
+ ---
+
+### 🧰 Environment Setup
+
+Add your OpenAI API key as an environment variable:
+
+Linux / macOS:
+```base
+export OPENAI_API_KEY="sk-your-key"
+```
+Windows PowerShell:
+```PowerShell
+setx OPENAI_API_KEY "sk-your-key"
+```
+Then in Dart:
+```dart
+initCommitAgent(openAIKey: Platform.environment['OPENAI_API_KEY']!);
+```
+
+---
+
+### 🧾 License
+
+This project is licensed under the MIT License — feel free to use it in personal and commercial projects.
+
+Copyright (c) 2025 Rohan
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files...
+
+## 🧑‍💼 Author
+
+Rohan Kumar Chaudhary (@rohan-165)
+📧 rohanchy165@gmail.com
+🌐 https://github.com/rohan-165
+📱 Mobile Application Developer | Flutter | Mobile App Enthusiast | AI Integrator
