@@ -1,7 +1,9 @@
 name: commit_agent
-description: AI-powered Git commit message generator for Dart & Flutter projects.
+description:  An AI-powered Git commit assistant that automatically generates commit messages using OpenAI GPT models.
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+publish_to: "https://pub.dev"    
+homepage: https://github.com/rohan-165/commit_agent
+repository: https://github.com/rohan-165/commit_agent
 
 environment:
   sdk: ^3.9.0
